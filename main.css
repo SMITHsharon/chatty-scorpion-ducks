@@ -1,0 +1,11 @@
+body {
+	background-color: #00ffff;
+}
+
+#output {
+	border: 2px solid black;
+}
+
+#container {
+	background-color: white;
+}
