@@ -37,6 +37,3 @@ myRequest5.addEventListener("load", executeWHATEVERAfterFileLoaded);
 myRequest5.addEventListener("error", executeThisCodeAfterFileFails);
 myRequest5.open("GET", "message5.json");
 myRequest5.send();
-
-
-g
