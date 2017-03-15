@@ -22,16 +22,20 @@ clearAllMsg.addEventListener("click", function(){
 		Chatty.delete(clearAllMsgs);
 });
 
-
+// Function to change font size
 var fontSize = document.getElementById("size");
 
 fontSize.addEventListener("change", function(){
 		console.log("I made it into the font func");
 });
 
-var changeTheme = document.getElementById("theme");
+// Function to change theme
+var changeColor = document.getElementById("theme");
 
-changeTheme.addEventListener("change", function(){
-		console.log("I made it into the change theme func");
-		body.classList.toggle(".changeColor");
+changeColor.addEventListener("change", function(){
+		changeTheme();
 });
+
+function changeTheme(){
+	console.log("Im inside changeTheme");
+}
