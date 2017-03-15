@@ -1,20 +1,16 @@
-var Chatty = (function(){
-
-	return 
-});
-
-
 // Function to detect enter key
 var detectEnter = document.getElementById("userInput");
 
 //variable to hold user input
-var captureInput = detectEnter.value;
+var captureInput;
 
-detectEnter.addEventListener("keypress", function(event){
+detectEnter.addEventListener("keyup", function(event){
     if(event.keyCode === 13){
-    	// console.log("I detected the enter key");
-			console.log(captureInput);
-        Chatty.messageHandler(writeToDOM); //writeToDOM is just a placeholder
+    	event.preventDefault();
+    	 console.log("I detected the enter key");
+			 captureInput = detectEnter.value;
+    	 console.log("this is what I typed:", captureInput);
+        // Chatty.messageHandler(writeToDOM); //writeToDOM is just a placeholder
     }
 });
 
@@ -24,4 +20,18 @@ var clearAllMsg = document.getElementById("clearBtn");
 
 clearAllMsg.addEventListener("click", function(){
 		Chatty.delete(clearAllMsgs);
+});
+
+
+var fontSize = document.getElementById("size");
+
+fontSize.addEventListener("change", function(){
+		console.log("I made it into the font func");
+});
+
+var changeTheme = document.getElementById("theme");
+
+changeTheme.addEventListener("change", function(){
+		console.log("I made it into the change theme func");
+		body.classList.toggle(".changeColor");
 });
