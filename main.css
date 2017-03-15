@@ -1,11 +1,47 @@
+
+
+
 body {
-	background-color: #00ffff;
+	background-color: #f0f8ff;
+
+}
+/******************
+container elements
+******************/
+#container {
+	background-color: white;
+	margin: 2%;
+	border: 1px solid white;
+	width: 90%;
+	height: 90%;
+	display: flex;
+	flex-direction: column;
 }
 
 #output {
-	border: 2px solid black;
+	border: 1px solid black;
+	width: 1000px;
+	height: 900px;
+	margin: 25px;
 }
 
-#container {
-	background-color: white;
+h3 {
+	margin-left: 20px;
 }
+
+input[type=checkbox] {
+	margin-top: 20px;
+}
+
+.navbar-brand {
+	color: black;
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
