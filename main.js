@@ -23,16 +23,16 @@ clearAllMsg.addEventListener("click", function(){
 });
 
 // Function to change font size
-var fontSize = document.getElementById("size");
+// var fontSize = document.getElementById("size");
 
-fontSize.addEventListener("change", function(){
-		console.log("I made it into the font func");
-});
+// fontSize.addEventListener("change", function(){
+// 		console.log("I made it into the font func");
+// });
 
 
 //****************************************************
 // Event handler and Function to toggle to <DarkTheme>
-// then back to initial state
+// then back to initial state <initState>
 //****************************************************
 var changeColor = document.getElementById("theme");
 var screenBackground = document.getElementById("container");
@@ -44,23 +44,20 @@ var messageText = document.getElementsByClassName("mssgText").innerHTML;
 var themeFlag = "initState";
 
 changeColor.addEventListener("change", function(){
-		changeTheme();
+	toggleTheme();
 });
 
-function changeTheme(){
+function toggleTheme(){
 
+    
 	if (themeFlag === "initState") {
 
         themeFlag = "darkTheme";
         screenBackground.style.backgroundColor = "darkgrey";
         for (var i=0; i<messageHolders.length; i++) {
-            
-?console.log("messageHolders[i].innerHTML :: i,", i, messageHolders[i].innerHTML);
+// console.log("messageHolders[i].innerHTML :: i,", i, messageHolders[i].innerHTML);
 
             messageHolders[i].style.color = "white";
-
-            // this line is for the <changeFontSize> toggleFunction
-            messageHolders[i].style.fontSize = "2.0em";
         } // forloop
         
     } else {
@@ -69,11 +66,38 @@ function changeTheme(){
         screenBackground.style.backgroundColor = "white";
         for (var i=0; i<messageHolders.length; i++) {
             messageHolders[i].style.color = "black";
+        } // for loop
+    } // else
+} // function toggleTheme
 
-            // this line is for the <changeFontSize> toggleFunction
+
+//****************************************************
+// Event handler and Function to toggle to <Large Text>
+// then back to initial state
+//****************************************************
+var changeFontSize = document.getElementById("size");
+var fontFlag = "initState";
+
+changeFontSize.addEventListener("change", function(){
+    toggleFont();
+});
+
+function toggleFont(){
+
+    if (fontFlag === "initState") {
+        fontFlag = "largeFont";
+        for (var i=0; i<messageHolders.length; i++) {
+// console.log("messageHolders[i].innerHTML :: i,", i, messageHolders[i].innerHTML);
+            messageHolders[i].style.fontSize = "2.0em";
+        } // forloop
+        
+    } else {
+        // current font is <largeFont>
+        fontFlag = "initState";
+        for (var i=0; i<messageHolders.length; i++) {
             messageHolders[i].style.fontSize = "1em";
         } // for loop
     } // else
-} // function changeTheme
+} // function toggleFont
 
 
