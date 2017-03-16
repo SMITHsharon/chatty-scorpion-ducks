@@ -1,18 +1,20 @@
 console.log("writing to console from messageHandler.js");
 // var userInput = document.getElementById('userInput');
-// var output = document.getElementById('output');
 // var clearBtn = document.getElementById('clearBtn');
 // var theme = document.getElementById('theme');
 // var size = document.getElementById('size');
+// var output = document.getElementById('output');
 
 var Chatty = (function (oldChatty) {
 
-	return{
-		writeToDOM: function(write) {
+	
+		oldChatty.writeToDOM =  function(message) {
+				return messageArray[message]
 
 		},
-		editMgs: function (edit){
+		oldChatty.editMgs = function (){
 
 		}
-	}
-});
+	};
+	return oldChatty
+})(Chatty || {});
