@@ -1,3 +1,7 @@
+
+
+console.log("writing to console from main.js");
+
 // Function to detect enter key
 var detectEnter = document.getElementById("userInput");
 
@@ -39,3 +43,4 @@ changeColor.addEventListener("change", function(){
 function changeTheme(){
 	console.log("Im inside changeTheme");
 }
+
