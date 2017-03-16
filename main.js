@@ -44,3 +44,5 @@ function changeTheme(){
 	console.log("Im inside changeTheme");
 }
 
+// var messages = chatty.addMessages();
+// console.log(messages);
