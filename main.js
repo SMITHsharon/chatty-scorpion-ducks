@@ -1,4 +1,7 @@
-// Function to detect enter key
+
+//****************************************************
+// Event handler for <Enter> key
+//****************************************************
 var detectEnter = document.getElementById("userInput");
 
 //variable to hold user input
