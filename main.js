@@ -29,13 +29,51 @@ fontSize.addEventListener("change", function(){
 		console.log("I made it into the font func");
 });
 
-// Function to change theme
+
+//****************************************************
+// Event handler and Function to toggle to <DarkTheme>
+// then back to initial state
+//****************************************************
 var changeColor = document.getElementById("theme");
+var screenBackground = document.getElementById("container");
+
+// vars <messageHolders> and <messageText> to be generated dynamically
+// when writing to DOM
+var messageHolders = document.getElementsByClassName("mssgText");
+var messageText = document.getElementsByClassName("mssgText").innerHTML;
+var themeFlag = "initState";
 
 changeColor.addEventListener("change", function(){
 		changeTheme();
 });
 
 function changeTheme(){
-	console.log("Im inside changeTheme");
-}
+
+	if (themeFlag === "initState") {
+
+        themeFlag = "darkTheme";
+        screenBackground.style.backgroundColor = "darkgrey";
+        for (var i=0; i<messageHolders.length; i++) {
+            
+?console.log("messageHolders[i].innerHTML :: i,", i, messageHolders[i].innerHTML);
+
+            messageHolders[i].style.color = "white";
+
+            // this line is for the <changeFontSize> toggleFunction
+            messageHolders[i].style.fontSize = "2.0em";
+        } // forloop
+        
+    } else {
+        // current theme is <darkTheme>
+        themeFlag = "initState";
+        screenBackground.style.backgroundColor = "white";
+        for (var i=0; i<messageHolders.length; i++) {
+            messageHolders[i].style.color = "black";
+
+            // this line is for the <changeFontSize> toggleFunction
+            messageHolders[i].style.fontSize = "1em";
+        } // for loop
+    } // else
+} // function changeTheme
+
+
