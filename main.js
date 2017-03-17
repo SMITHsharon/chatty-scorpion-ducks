@@ -9,11 +9,9 @@ var captureInput;
 
 detectEnter.addEventListener("keyup", function(event){
     if(event.keyCode === 13){
-    	event.preventDefault();
-    	 console.log("I detected the enter key");
-			 captureInput = detectEnter.value;
-    	 console.log("this is what I typed:", captureInput);
-        // Chatty.messageHandler(writeToDOM); //writeToDOM is just a placeholder
+    	// event.preventDefault();
+		captureInput = detectEnter.value;
+        Chatty.writeToDOM(captureInput);
     }
 });
 
@@ -54,7 +52,6 @@ function toggleTheme(){
         themeFlag = "darkTheme";
         screenBackground.style.backgroundColor = "darkgrey";
         for (var i=0; i<messageHolders.length; i++) {
-// console.log("messageHolders[i].innerHTML :: i,", i, messageHolders[i].innerHTML);
 
             messageHolders[i].style.color = "white";
         } // forloop
@@ -87,7 +84,6 @@ function toggleFont(){
     if (fontFlag === "initState") {
         fontFlag = "largeFont";
         for (var i=0; i<messageHolders.length; i++) {
-// console.log("messageHolders[i].innerHTML :: i,", i, messageHolders[i].innerHTML);
             messageHolders[i].style.fontSize = "2.0em";
         } // forloop
         
@@ -102,4 +98,5 @@ function toggleFont(){
 
 
 
-console.log(Chatty.getMessageArray());
+// console.log(Chatty.getMessageArray());
+

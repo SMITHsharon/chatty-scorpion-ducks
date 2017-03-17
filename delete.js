@@ -1,5 +1,5 @@
 
-var Chatty = (function(){
+var Chatty = (function(oldChatty){
 
 	function deleteMsg (xhrOneData){
 		// messageArray.push(msg1) // from getJSON.js
@@ -12,8 +12,7 @@ var Chatty = (function(){
 
 	return {
 		// getMessageArray: function(){
-			return messageArray;
+			// return messageArray;
 		}
-	}
-
-})(Chatty);
+		return oldChatty;
+})(Chatty || {});
