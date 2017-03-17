@@ -9,27 +9,22 @@ var Chatty = (function(){
 	var messageArray = [];
 	function addMsg1(xhrOneData){
 		var msg1=xhrOneData.message1;
-		console.log(msg1);
 		messageArray.push(msg1);
 	}
 	function addMsg2(xhrTwoData){
 		var msg2=xhrTwoData.message2;
-		console.log(msg2);
 		messageArray.push(msg2);
 	}
 	function addMsg3(xhrThreeData){
 		var msg3=xhrThreeData.message3;
-		console.log(msg3);
 		messageArray.push(msg3);
 	}
 	function addMsg4(xhrFourData){
 		var msg4=xhrFourData.message4;
-		console.log(msg4);
 		messageArray.push(msg4);
 	}
 	function addMsg5(xhrFiveData){
 		var msg5=xhrFiveData.message5;
-		console.log(msg5);
 		messageArray.push(msg5);
 		return messageArray;	
 	}
