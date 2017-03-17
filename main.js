@@ -86,6 +86,7 @@ changeFontSize.addEventListener("change", function(){
     toggleFont();
 });
 
+
 function toggleFont(){
 
     if (fontFlag === "initState") {
@@ -103,5 +104,6 @@ function toggleFont(){
         } // for loop
     } // else
 } // function toggleFont
+
 
 
