@@ -1,2 +1,15 @@
+var Chatty = (function (oldChatty) {
 
-console.log("writing to console from messageHandler.js");
+	
+		oldChatty.writeToDOM =  function(message) {
+			console.log(oldChatty.getMessageArray());
+			var message = oldChatty.getMessageArray();
+				return message;
+
+		};
+		oldChatty.editMgs = function (){
+
+		}
+	return oldChatty;
+
+})(Chatty || {});
