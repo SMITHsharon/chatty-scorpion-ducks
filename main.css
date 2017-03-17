@@ -1,9 +1,7 @@
 
 
-
 body {
 	background-color: #f0f8ff;
-
 }
 /******************
 container elements
@@ -20,9 +18,9 @@ container elements
 
 #output {
 	border: 1px solid black;
-	width: 1000px;
+	width: 90%;
 	height: 900px;
-	margin: 25px;
+	margin: 25px auto;
 }
 
 h3 {
@@ -31,6 +29,7 @@ h3 {
 
 input[type=checkbox] {
 	margin-top: 20px;
+	margin-left: 25px;
 }
 
 .navbar-brand {
@@ -38,7 +37,10 @@ input[type=checkbox] {
 	font-size: 20px;
 }
 
-
+/*.changeColor {
+	background-color: #808080;
+}
+*/
 
 
 
