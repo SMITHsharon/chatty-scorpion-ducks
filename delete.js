@@ -7,7 +7,7 @@ var Chatty = (function(){
 	}
 
 	function clearAllMsgs (xhrOneData){
-		// waiting on <messageHandler> structure
+		console.log("in delete.clearAllMsgs");
 	}
 
 	return {

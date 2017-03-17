@@ -18,19 +18,14 @@ detectEnter.addEventListener("keyup", function(event){
 });
 
 
-// Function to detect click of the Clear All Messages button
-var clearAllMsg = document.getElementById("clearBtn");
+//****************************************************
+// Event handler for <Clear Message Board> key
+//****************************************************
+var clearAllMsgs = document.getElementById("clearBtn");
 
-clearAllMsg.addEventListener("click", function(){
-		Chatty.delete(clearAllMsgs);
+clearAllMsgs.addEventListener("click", function(){
+	Chatty.clearAllMsgs();
 });
-
-// Function to change font size
-// var fontSize = document.getElementById("size");
-
-// fontSize.addEventListener("change", function(){
-// 		console.log("I made it into the font func");
-// });
 
 
 //****************************************************
