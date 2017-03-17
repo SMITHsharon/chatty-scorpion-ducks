@@ -107,3 +107,4 @@ function toggleFont(){
 
 
 
+console.log(Chatty.getMessageArray());
