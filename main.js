@@ -43,6 +43,4 @@ changeColor.addEventListener("change", function(){
 function changeTheme(){
 	console.log("Im inside changeTheme");
 }
-
-// var messages = chatty.addMessages();
-// console.log(messages);
+console.log(Chatty.getMessageArray());
