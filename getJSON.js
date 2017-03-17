@@ -87,6 +87,10 @@ var Chatty = (function(){
 	myRequest1.addEventListener("error", executeThisCodeAfterFileFails);
 	myRequest1.open("GET", "message1.json");
 	myRequest1.send();
-	
+	return {
+		getMessageArray: function(){
+			return messageArray;
+		}
+	}
 
 })(Chatty);
