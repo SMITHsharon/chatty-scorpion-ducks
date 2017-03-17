@@ -1,17 +1,15 @@
 var Chatty = (function (oldChatty) {
 
-	return {
-		writeToDOM: function(message) {
-			console.log("I'm inside write");
-			var message += messageArray;
-			message.innerHTML = `${messageArray}`;
-		},
-		editMgs: function (){
+	
+		oldChatty.writeToDOM =  function(message) {
+			console.log(oldChatty.getMessageArray());
+			var message = oldChatty.getMessageArray();
+				return message;
+
+		};
+		oldChatty.editMgs = function (){
 
 		}
-	}
-
-};
-	// return oldChatty;
+	return oldChatty;
 
 })(Chatty || {});
