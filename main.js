@@ -26,7 +26,7 @@ function whichButton(){
         clickText = event.target.parentNode.firstChild.textContent;
         Chatty.readText(clickText);
     };
-
+}
 output.addEventListener("click", whichButton);
 
 
