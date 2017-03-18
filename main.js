@@ -20,12 +20,10 @@ function whichButton(){
     if (event.target.className==="delMsg"){
         Chatty.deleteMsg();
     }
-    // } else if (event.target.className==="edMsg"){
-    //     console.log(Chatty.addUserInput());
-    //     // Chatty.editMsg(event.target.parentNode.firstChild.textContent);
-    // } 
-    else if(event.target.className==="readMsg"){
-
+    
+    else if(event.target.className==="play"){
+        clickText = event.target.parentNode.firstChild.textContent;
+        Chatty.readText(clickText);
     };
 
 }

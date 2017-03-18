@@ -10,7 +10,7 @@ var Chatty = (function (oldChatty) {
 			var messageElement = "";
 				for (var i = 0; i < messageArray.length; i++) {
 					var captureMessage = messageArray[i];
-					messageElement += `<div class="mssgText">${captureMessage}<button class="delMsg" id = "${i}">Delete</button><button class="readMsg" id = "readMsg${i}"><img src="http://franriavilla.in/images/unmute.png"></button></div>`;
+					messageElement += `<div class="mssgText">${captureMessage}<button class="delMsg" id = "${i}">Delete</button><input class='play' type='button' value='🔊 Play' /></div>`;
 				}
 				output.innerHTML = messageElement;
 		};
