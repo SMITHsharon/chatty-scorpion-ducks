@@ -10,10 +10,9 @@ var detectEnter = document.getElementById("userInput");
 
 detectEnter.addEventListener("keyup", function(event){
     if(event.keyCode === 13){
-
 		captureInput = detectEnter.value;
         Chatty.addUserInput(captureInput); //writeToDOM is just a placeholder
-
+        detectEnter.value = "";
     }
 });
 
@@ -66,7 +65,7 @@ changeColor.addEventListener("change", function(){
 
 function toggleTheme(){
 
-    
+
 	if (themeFlag === "initState") {
 
         themeFlag = "darkTheme";
@@ -75,7 +74,7 @@ function toggleTheme(){
 
             messageHolders[i].style.color = "white";
         } // forloop
-        
+
     } else {
         // current theme is <darkTheme>
         themeFlag = "initState";
@@ -106,7 +105,7 @@ function toggleFont(){
         for (var i=0; i<messageHolders.length; i++) {
             messageHolders[i].style.fontSize = "2.0em";
         } // forloop
-        
+
     } else {
         // current font is <largeFont>
         fontFlag = "initState";
