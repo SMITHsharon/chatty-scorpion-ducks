@@ -1,10 +1,16 @@
 
 var Chatty = (function (oldChatty) {
 	
-	oldChatty.deleteMsg = function() {
-		// messageArray.push(msg1) // from getJSON.js
-		// waiting on <messageHandler> structure
+	// <deleteMsg> deletes the selected message from the array
+	// * PARAMETER is the index array for the message
+	// * calls writeToDOM to rewrite the screen
+	oldChatty.deleteMsg = function(thisMessage) {
+
+		var allMessages = Chatty.getMessageArray();
+		allMessages.splice(thisMessage, 1);
+		Chatty.writeToDOM(allMessages);
 	};
+		
 
 	// <clearAllMsgs> clears all messages from the screen
 	// * Deletes all entries from <messageArray>
@@ -18,9 +24,6 @@ var Chatty = (function (oldChatty) {
 		Chatty.writeToDOM(allMessages);
 	};
 
-
-
 		return oldChatty;
-
 
 })(Chatty || {});

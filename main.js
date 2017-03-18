@@ -6,32 +6,33 @@
 //****************************************************
 var detectEnter = document.getElementById("userInput");
 
-//variable to hold user input
-
 detectEnter.addEventListener("keyup", function(event){
     if(event.keyCode === 13){
+
 		captureInput = detectEnter.value;
         Chatty.addUserInput(captureInput); //writeToDOM is just a placeholder
+
         detectEnter.value = "";
     }
 });
 
+
 function whichButton(){
     if (event.target.className==="delMsg"){
-        Chatty.deleteMsg();
+        Chatty.deleteMsg(event.target.id);
     }
     
     else if(event.target.className==="play"){
         clickText = event.target.parentNode.firstChild.textContent;
         Chatty.readText(clickText);
     };
-
 }
 output.addEventListener("click", whichButton);
 
 
+
 //****************************************************
-// Event handler for <Clear Message Board> key
+// Event handler for <Clear Message Board> button
 // When user clicks <Clear Message Board>
 // calls <clearAllMsgs> to clear all messages from the screen
 //****************************************************
