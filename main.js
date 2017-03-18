@@ -12,7 +12,7 @@ detectEnter.addEventListener("keyup", function(event){
     	 console.log("I detected the enter key");
 			 captureInput = detectEnter.value;
     	 console.log("this is what I typed:", captureInput);
-        Chatty.writeToDOM(captureInput); //writeToDOM is just a placeholder
+        Chatty.addUserInput(captureInput); //writeToDOM is just a placeholder
     }
 });
 

@@ -1,15 +1,20 @@
 var Chatty = (function (oldChatty) {
-
-var messageElement = "";
-
-		oldChatty.writeToDOM =  function(input) {
+		oldChatty.addUserInput = function(input){
 			var message = oldChatty.getMessageArray();
-				for (var i = 0; i < message.length; i++) {
-					var captureMessage = message[i];
-					messageElement += `<div class="mssgText">${captureMessage}<button class="delMsg">Delete</button></div>`;
+			console.log(message);
+			
+			message.push(input);
+			oldChatty.writeToDOM(message);
+			
+		}
+
+		oldChatty.writeToDOM =  function (messageArray) {
+			var messageElement = "";
+				for (var i = 0; i < messageArray.length; i++) {
+					var captureMessage = messageArray[i];
+					messageElement += `<div class="mssgText">${captureMessage}<button class="delMsg">Delete</button><button class="editMsg">Edit</button></div>`;
 				}
-					messageElement += `<div class="mssgText">${input}<button class="delMsg">Delete</button></div>`;
-					output.innerHTML = messageElement;
+				output.innerHTML = messageElement;
 
 		};
 		oldChatty.editMgs = function (){
