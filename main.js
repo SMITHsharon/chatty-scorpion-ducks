@@ -10,17 +10,8 @@ var detectEnter = document.getElementById("userInput");
 
 detectEnter.addEventListener("keyup", function(event){
     if(event.keyCode === 13){
-<<<<<<< HEAD
-    	// event.preventDefault();
 		captureInput = detectEnter.value;
-        Chatty.writeToDOM(captureInput);
-=======
-    	event.preventDefault();
-    	 console.log("I detected the enter key");
-			 captureInput = detectEnter.value;
-    	 console.log("this is what I typed:", captureInput);
         Chatty.addUserInput(captureInput); //writeToDOM is just a placeholder
->>>>>>> master
     }
 });
 
@@ -107,10 +98,4 @@ function toggleFont(){
     } // else
 } // function toggleFont
 
-<<<<<<< HEAD
 
-
-// console.log(Chatty.getMessageArray());
-
-=======
->>>>>>> master
