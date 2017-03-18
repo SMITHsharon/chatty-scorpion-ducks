@@ -8,11 +8,10 @@ var detectEnter = document.getElementById("userInput");
 
 detectEnter.addEventListener("keyup", function(event){
     if(event.keyCode === 13){
-    	event.preventDefault();
-    	 console.log("I detected the enter key");
-			 captureInput = detectEnter.value;
-    	 console.log("this is what I typed:", captureInput);
-        Chatty.writeToDOM(captureInput); //writeToDOM is just a placeholder
+
+		captureInput = detectEnter.value;
+        Chatty.writeToDOM(captureInput); 
+
     }
 });
 
