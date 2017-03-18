@@ -5,12 +5,13 @@
 var detectEnter = document.getElementById("userInput");
 
 //variable to hold user input
-var captureInput;
 
 detectEnter.addEventListener("keyup", function(event){
     if(event.keyCode === 13){
+
 		captureInput = detectEnter.value;
         Chatty.writeToDOM(captureInput); 
+
     }
 });
 
@@ -97,6 +98,3 @@ function toggleFont(){
     } // else
 } // function toggleFont
 
-
-
-console.log(Chatty.getMessageArray());
