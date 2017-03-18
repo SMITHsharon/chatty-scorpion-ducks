@@ -42,7 +42,13 @@ input[type=checkbox] {
 	width: 20px;
 }
 
+.mssgText {
+	margin-top: 15px;
+	margin-left: 25px;
+}
 
-
+.delMsg, .play {
+	margin-left: 20px;
+}
 
 
