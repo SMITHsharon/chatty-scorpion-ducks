@@ -17,11 +17,16 @@ detectEnter.addEventListener("keyup", function(event){
 });
 
 
-
 function whichButton(){
     if (event.target.className==="delMsg"){
         Chatty.deleteMsg(event.target.id);
-}
+    }
+    
+    else if(event.target.className==="play"){
+        clickText = event.target.parentNode.firstChild.textContent;
+        Chatty.readText(clickText);
+    };
+
 output.addEventListener("click", whichButton);
 
 
