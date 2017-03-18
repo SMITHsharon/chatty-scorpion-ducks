@@ -1,7 +1,10 @@
 
 var Chatty = (function (oldChatty) {
 	
-	oldChatty.deleteMsg = function() {
+	oldChatty.deleteMsg = function(thisMessage) {
+		console.log("in iife deleteMsg");
+		console.log("thisMessage");
+		// id = delMsg3
 		// messageArray.push(msg1) // from getJSON.js
 		// waiting on <messageHandler> structure
 	};
@@ -18,6 +21,9 @@ var Chatty = (function (oldChatty) {
 		Chatty.writeToDOM(allMessages);
 	};
 
+
+
 		return oldChatty;
+
 
 })(Chatty || {});

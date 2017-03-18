@@ -10,11 +10,27 @@ var detectEnter = document.getElementById("userInput");
 
 detectEnter.addEventListener("keyup", function(event){
     if(event.keyCode === 13){
+
 		captureInput = detectEnter.value;
         Chatty.addUserInput(captureInput); //writeToDOM is just a placeholder
+
     }
 });
 
+
+
+function whichButton(){
+    if (event.target.className==="delMsg"){
+        // console.log("delete message event", event);
+        // console.log("event.target", event.target);
+        // console.log("event.target.parentNode.parentNode", event.target.parentNode.parentNode);
+        Chatty.deleteMsg(event.target);
+    } else if (event.target.className==="edMsg"){
+        Chatty.editMsg();
+    };
+
+}
+output.addEventListener("click", whichButton);
 
 
 //****************************************************
