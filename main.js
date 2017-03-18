@@ -14,6 +14,7 @@ detectEnter.addEventListener("keyup", function(event){
 		captureInput = detectEnter.value;
         Chatty.addUserInput(captureInput); //writeToDOM is just a placeholder
 
+        detectEnter.value = "";
     }
 });
 
@@ -32,7 +33,6 @@ function whichButton(){
 }
 output.addEventListener("click", whichButton);
 
-
 function whichButton(){
     if (event.target.className==="delMsg"){
         // console.log("delete message event", event);
@@ -45,6 +45,7 @@ function whichButton(){
 
 }
 output.addEventListener("click", whichButton);
+
 
 
 //****************************************************
@@ -95,7 +96,7 @@ changeColor.addEventListener("change", function(){
 
 function toggleTheme(){
 
-    
+
 	if (themeFlag === "initState") {
 
         themeFlag = "darkTheme";
@@ -104,7 +105,7 @@ function toggleTheme(){
 
             messageHolders[i].style.color = "white";
         } // forloop
-        
+
     } else {
         // current theme is <darkTheme>
         themeFlag = "initState";
@@ -135,7 +136,7 @@ function toggleFont(){
         for (var i=0; i<messageHolders.length; i++) {
             messageHolders[i].style.fontSize = "2.0em";
         } // forloop
-        
+
     } else {
         // current font is <largeFont>
         fontFlag = "initState";
