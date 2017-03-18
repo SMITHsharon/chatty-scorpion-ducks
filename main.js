@@ -10,11 +10,22 @@ var detectEnter = document.getElementById("userInput");
 
 detectEnter.addEventListener("keyup", function(event){
     if(event.keyCode === 13){
+
 		captureInput = detectEnter.value;
         Chatty.addUserInput(captureInput); //writeToDOM is just a placeholder
+
     }
 });
 
+function whichButton(){
+    if (event.target.className==="delMsg"){
+        Chatty.deleteMsg();
+    } else if (event.target.className==="edMsg"){
+        Chatty.editMsg();
+    };
+
+}
+output.addEventListener("click", whichButton);
 
 
 //****************************************************

@@ -18,6 +18,9 @@ var Chatty = (function (oldChatty) {
 		Chatty.writeToDOM(allMessages);
 	};
 
+
+
 		return oldChatty;
+
 
 })(Chatty || {});
