@@ -1,4 +1,4 @@
-var Chatty = (function(){
+var Chatty = (function(oldChatty){
 
 	var myRequest1 = new XMLHttpRequest();
 	var myRequest2 = new XMLHttpRequest();
@@ -10,27 +10,24 @@ var Chatty = (function(){
 	function addMsg1(xhrOneData){
 		var msg1=xhrOneData.message1;
 		messageArray.push(msg1);
-		output.innerHTML = `<div class="mssgText">${msg1}<button class="delMsg" id="0">Delete</button><input class='play' type='button' value='🔊 Play' /></div>`;
+		
 	}
 	function addMsg2(xhrTwoData){
 		var msg2=xhrTwoData.message2;
 		messageArray.push(msg2);
-		output.innerHTML += `<div class="mssgText">${msg2}<button class="delMsg" id="1">Delete</button><input class='play' type='button' value='🔊 Play' /></div>`;
 	}
 	function addMsg3(xhrThreeData){
 		var msg3=xhrThreeData.message3;
 		messageArray.push(msg3);	
-		output.innerHTML += `<div class="mssgText">${msg3}<button class="delMsg" id="2">Delete</button><input class='play' type='button' value='🔊 Play' /></div>`;
 	}
 	function addMsg4(xhrFourData){
 		var msg4=xhrFourData.message4;
 		messageArray.push(msg4);
-		output.innerHTML += `<div class="mssgText">${msg4}<button class="delMsg" id="3">Delete</button><input class='play' type='button' value='🔊 Play' /></div>`;
 	}
 	function addMsg5(xhrFiveData){
 		var msg5=xhrFiveData.message5;
 		messageArray.push(msg5);
-		output.innerHTML += `<div class="mssgText">${msg5}<button class="delMsg" id="5">Delete</button><input class='play' type='button' value='🔊 Play' /></div>`;
+		Chatty.writeToDOM(messageArray);
 	}
 	function executeThisCodeAfterFileFails(){
 		console.log("boooooo");
@@ -87,10 +84,11 @@ var Chatty = (function(){
 	myRequest1.open("GET", "message1.json");
 	myRequest1.send();
 
-	return {
-		getMessageArray: function(){
+	
+		oldChatty.getMessageArray = function(){
 			return messageArray;
-		}
+		
 	}
+	return oldChatty;
 
-})(Chatty);
+})(Chatty || {});
