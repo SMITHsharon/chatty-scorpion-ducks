@@ -1,20 +1,23 @@
 
-var Chatty = (function(oldChatty){
-
-	function deleteMsg (xhrOneData){
+var Chatty = (function (oldChatty) {
+	
+	oldChatty.deleteMsg = function() {
 		// messageArray.push(msg1) // from getJSON.js
 		// waiting on <messageHandler> structure
-	}
+	};
 
-	function clearAllMsgs (xhrOneData){
-		console.log("in delete.clearAllMsgs");
-	}
+	// <clearAllMsgs> clears all messages from the screen
+	// * Deletes all entries from <messageArray>
+	// * calls writeToDOM to rewrite the screen
+	oldChatty.clearAllMsgs = function() {
 
-	return {
-		getMessageArray: function(){
-			console.log(messageArray);
-			return messageArray;
-		}
-	}
+		var allMessages = Chatty.getMessageArray();
+		for (var i=allMessages.length; i>0; i--) {
+			allMessages.shift();
+		};
+		Chatty.writeToDOM(allMessages);
+	};
 
-})(Chatty);
+		return oldChatty;
+
+})(Chatty || {});
