@@ -1,6 +1,7 @@
 var Chatty = (function (oldChatty) {
 		oldChatty.addUserInput = function(input){
 			var message = oldChatty.getMessageArray();
+
 			console.log(message);
 			
 			message.push(input);
@@ -12,11 +13,11 @@ var Chatty = (function (oldChatty) {
 			var messageElement = "";
 				for (var i = 0; i < messageArray.length; i++) {
 					var captureMessage = messageArray[i];
-					messageElement += `<div class="mssgText">${captureMessage}<button class="delMsg">Delete</button><button class="editMsg">Edit</button></div>`;
+					messageElement += `<div class="mssgText">${captureMessage}<button class="delMsg">Delete</button><button class="edMsg">Edit</button></div>`;
 				}
 				output.innerHTML = messageElement;
-
 		};
+		
 		oldChatty.editMgs = function (){
 
 		}
