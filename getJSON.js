@@ -10,27 +10,27 @@ var Chatty = (function(){
 	function addMsg1(xhrOneData){
 		var msg1=xhrOneData.message1;
 		messageArray.push(msg1);
-		output.innerHTML = `<div class="mssgText">${msg1}<button class="delMsg" id="0">Delete</button><button class="readMsg" id = "readMsg0"><img src="http://franriavilla.in/images/unmute.png"></button></div>`;
+		output.innerHTML = `<div class="mssgText">${msg1}<button class="delMsg" id="0">Delete</button><input class='play' type='button' value='🔊 Play' /></div>`;
 	}
 	function addMsg2(xhrTwoData){
 		var msg2=xhrTwoData.message2;
 		messageArray.push(msg2);
-		output.innerHTML += `<div class="mssgText">${msg2}<button class="delMsg" id="1">Delete</button><button class="readMsg" id = "readMsg1"><img src="http://franriavilla.in/images/unmute.png"></button></div>`;
+		output.innerHTML += `<div class="mssgText">${msg2}<button class="delMsg" id="1">Delete</button><input class='play' type='button' value='🔊 Play' /></div>`;
 	}
 	function addMsg3(xhrThreeData){
 		var msg3=xhrThreeData.message3;
 		messageArray.push(msg3);	
-		output.innerHTML += `<div class="mssgText">${msg3}<button class="delMsg" id="2">Delete</button><button class="readMsg" id = "readMsg2"><img src="http://franriavilla.in/images/unmute.png"></button></div>`;
+		output.innerHTML += `<div class="mssgText">${msg3}<button class="delMsg" id="2">Delete</button><input class='play' type='button' value='🔊 Play' /></div>`;
 	}
 	function addMsg4(xhrFourData){
 		var msg4=xhrFourData.message4;
 		messageArray.push(msg4);
-		output.innerHTML += `<div class="mssgText">${msg4}<button class="delMsg" id="3">Delete</button><button class="readMsg" id = "readMsg3"><img src="http://franriavilla.in/images/unmute.png"></button></div>`;
+		output.innerHTML += `<div class="mssgText">${msg4}<button class="delMsg" id="3">Delete</button><input class='play' type='button' value='🔊 Play' /></div>`;
 	}
 	function addMsg5(xhrFiveData){
 		var msg5=xhrFiveData.message5;
 		messageArray.push(msg5);
-		output.innerHTML += `<div class="mssgText">${msg5}<button class="delMsg" id="5">Delete</button><button class="readMsg" id = "readMsg4"><img src="http://franriavilla.in/images/unmute.png"></button></div>`;
+		output.innerHTML += `<div class="mssgText">${msg5}<button class="delMsg" id="5">Delete</button><input class='play' type='button' value='🔊 Play' /></div>`;
 	}
 	function executeThisCodeAfterFileFails(){
 		console.log("boooooo");
