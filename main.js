@@ -11,18 +11,20 @@ detectEnter.addEventListener("keyup", function(event){
 
 		captureInput = detectEnter.value;
         Chatty.addUserInput(captureInput); //writeToDOM is just a placeholder
-
+        if (captureInput != ""){
+            clearAllMsgs.removeAttribute("disabled", true);
+        };
         detectEnter.value = "";
     }
 });
 
 
 function whichButton(){
-    if (event.target.className==="delMsg"){
+    if (event.target.className.includes("delMsg")){
         Chatty.deleteMsg(event.target.id);
     }
     
-    else if(event.target.className==="play"){
+    else if(event.target.className.includes("play")){
         clickText = event.target.parentNode.firstChild.textContent;
         Chatty.readText(clickText);
     };
@@ -40,6 +42,7 @@ var clearAllMsgs = document.getElementById("clearBtn");
 
 clearAllMsgs.addEventListener("click", function(){
     Chatty.clearAllMsgs();
+    clearAllMsgs.setAttribute("disabled", true);
 });
 
 
