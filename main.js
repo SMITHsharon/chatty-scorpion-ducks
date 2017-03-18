@@ -19,6 +19,8 @@ detectEnter.addEventListener("keyup", function(event){
 
 //****************************************************
 // Event handler for <Clear Message Board> key
+// When user clicks <Clear Message Board>
+// calls <clearAllMsgs> to clear all messages from the screen
 //****************************************************
 var clearAllMsgs = document.getElementById("clearBtn");
 

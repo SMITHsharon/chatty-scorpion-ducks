@@ -6,16 +6,15 @@ var Chatty = (function (oldChatty) {
 		// waiting on <messageHandler> structure
 	};
 
+	// <clearAllMsgs> clears all messages from the screen
+	// * Deletes all entries from <messageArray>
+	// * calls writeToDOM to rewrite the screen
 	oldChatty.clearAllMsgs = function() {
-		console.log("in delete.clearAllMsgs");
 
 		var allMessages = Chatty.getMessageArray();
-		console.log("messageArray :: ", allMessages);
-		for (var i=0; i<allMessages.length; i++) {
+		for (var i=allMessages.length; i>0; i--) {
 			allMessages.shift();
-			console.log("messageArray; i :: ", i, allMessages);
-	};
-		
+		};
 		Chatty.writeToDOM(allMessages);
 	};
 
