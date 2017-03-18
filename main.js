@@ -18,7 +18,7 @@ detectEnter.addEventListener("keyup", function(event){
 
 
 //****************************************************
-// Event handler for <Clear Message Board> key
+// Event handler for <Clear Message Board> button
 // When user clicks <Clear Message Board>
 // calls <clearAllMsgs> to clear all messages from the screen
 //****************************************************
@@ -27,6 +27,21 @@ var clearAllMsgs = document.getElementById("clearBtn");
 clearAllMsgs.addEventListener("click", function(){
     Chatty.clearAllMsgs();
 });
+
+
+
+//****************************************************
+// Event handler for <Delete> button on individual messages
+// When user clicks <Delete> on a particular message
+// calls <deleteMsg> to delete that message from the array and screen
+//****************************************************
+// var delMsgButton = document.getElementsByClassName("delMsg");
+
+// delMsgButton.addEventListener("click", function(event){
+//     console.log("delete message event", event);
+//     Chatty.deleteMsg();
+// });
+
 
 
 
