@@ -17,6 +17,20 @@ detectEnter.addEventListener("keyup", function(event){
     }
 });
 
+function whichButton(){
+    if (event.target.className==="delMsg"){
+        Chatty.deleteMsg();
+    }
+    // } else if (event.target.className==="edMsg"){
+    //     console.log(Chatty.addUserInput());
+    //     // Chatty.editMsg(event.target.parentNode.firstChild.textContent);
+    // } 
+    else if(event.target.className==="readMsg"){
+
+    };
+
+}
+output.addEventListener("click", whichButton);
 
 
 function whichButton(){
