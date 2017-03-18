@@ -10,27 +10,27 @@ var Chatty = (function(){
 	function addMsg1(xhrOneData){
 		var msg1=xhrOneData.message1;
 		messageArray.push(msg1);
-		output.innerHTML = `<div class="mssgText">${msg1}<button class="delMsg">Delete</button></div>`;
+		output.innerHTML = `<div class="mssgText">${msg1}<button class="delMsg" id="delMsg0">Delete</button></div>`;
 	}
 	function addMsg2(xhrTwoData){
 		var msg2=xhrTwoData.message2;
 		messageArray.push(msg2);
-		output.innerHTML += `<div class="mssgText">${msg2}<button class="delMsg">Delete</button></div>`;
+		output.innerHTML += `<div class="mssgText">${msg2}<button class="delMsg" id="delMsg1">Delete</button></div>`;
 	}
 	function addMsg3(xhrThreeData){
 		var msg3=xhrThreeData.message3;
 		messageArray.push(msg3);	
-		output.innerHTML += `<div class="mssgText">${msg3}<button class="delMsg">Delete</button></div>`;
+		output.innerHTML += `<div class="mssgText">${msg3}<button class="delMsg" id="delMsg2">Delete</button></div>`;
 	}
 	function addMsg4(xhrFourData){
 		var msg4=xhrFourData.message4;
 		messageArray.push(msg4);
-		output.innerHTML += `<div class="mssgText">${msg4}<button class="delMsg">Delete</button></div>`;
+		output.innerHTML += `<div class="mssgText">${msg4}<button class="delMsg" id="delMsg3">Delete</button></div>`;
 	}
 	function addMsg5(xhrFiveData){
 		var msg5=xhrFiveData.message5;
 		messageArray.push(msg5);
-		output.innerHTML += `<div class="mssgText">${msg5}<button class="delMsg">Delete</button></div>`;
+		output.innerHTML += `<div class="mssgText">${msg5}<button class="delMsg" id="delMsg5">Delete</button></div>`;
 	}
 	function executeThisCodeAfterFileFails(){
 		console.log("boooooo");
