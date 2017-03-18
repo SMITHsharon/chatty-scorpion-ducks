@@ -6,8 +6,6 @@
 //****************************************************
 var detectEnter = document.getElementById("userInput");
 
-//variable to hold user input
-
 detectEnter.addEventListener("keyup", function(event){
     if(event.keyCode === 13){
 
@@ -18,31 +16,11 @@ detectEnter.addEventListener("keyup", function(event){
     }
 });
 
-function whichButton(){
-    if (event.target.className==="delMsg"){
-        Chatty.deleteMsg();
-    }
-    // } else if (event.target.className==="edMsg"){
-    //     console.log(Chatty.addUserInput());
-    //     // Chatty.editMsg(event.target.parentNode.firstChild.textContent);
-    // } 
-    else if(event.target.className==="readMsg"){
 
-    };
-
-}
-output.addEventListener("click", whichButton);
 
 function whichButton(){
     if (event.target.className==="delMsg"){
-        // console.log("delete message event", event);
-        // console.log("event.target", event.target);
-        // console.log("event.target.parentNode.parentNode", event.target.parentNode.parentNode);
-        Chatty.deleteMsg(event.target);
-    } else if (event.target.className==="edMsg"){
-        Chatty.editMsg();
-    };
-
+        Chatty.deleteMsg(event.target.id);
 }
 output.addEventListener("click", whichButton);
 
@@ -58,21 +36,6 @@ var clearAllMsgs = document.getElementById("clearBtn");
 clearAllMsgs.addEventListener("click", function(){
     Chatty.clearAllMsgs();
 });
-
-
-
-//****************************************************
-// Event handler for <Delete> button on individual messages
-// When user clicks <Delete> on a particular message
-// calls <deleteMsg> to delete that message from the array and screen
-//****************************************************
-// var delMsgButton = document.getElementsByClassName("delMsg");
-
-// delMsgButton.addEventListener("click", function(event){
-//     console.log("delete message event", event);
-//     Chatty.deleteMsg();
-// });
-
 
 
 
