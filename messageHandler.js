@@ -3,7 +3,6 @@ var Chatty = (function (oldChatty) {
 			var message = oldChatty.getMessageArray();
 			message.push(input);
 			oldChatty.writeToDOM(message);
-			return message;
 		}
 
 		oldChatty.writeToDOM =  function (messageArray) {
@@ -15,13 +14,6 @@ var Chatty = (function (oldChatty) {
 				output.innerHTML = messageElement;
 		};
 		
-		oldChatty.editMsg = function (editEvent){
-			for (var j=0; j<message.lenght; j++){
-				if (messageArray[j]===editEvent ){
-					console.log(editEvent, "replace text")
-				};
-			}
-		}
 	return oldChatty;
 
 })(Chatty || {});
