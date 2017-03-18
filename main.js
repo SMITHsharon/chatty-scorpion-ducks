@@ -1,4 +1,6 @@
 
+
+
 //****************************************************
 // Event handler for <Enter> key
 //****************************************************
@@ -16,14 +18,16 @@ detectEnter.addEventListener("keyup", function(event){
 });
 
 
+
 //****************************************************
 // Event handler for <Clear Message Board> key
 //****************************************************
 var clearAllMsgs = document.getElementById("clearBtn");
 
 clearAllMsgs.addEventListener("click", function(){
-	Chatty.clearAllMsgs();
+    Chatty.clearAllMsgs();
 });
+
 
 
 //****************************************************
