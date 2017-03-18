@@ -1,4 +1,6 @@
 
+
+
 //****************************************************
 // Event handler for <Enter> key
 //****************************************************
@@ -8,23 +10,24 @@ var detectEnter = document.getElementById("userInput");
 
 detectEnter.addEventListener("keyup", function(event){
     if(event.keyCode === 13){
-    	event.preventDefault();
-    	 console.log("I detected the enter key");
-			 captureInput = detectEnter.value;
-    	 console.log("this is what I typed:", captureInput);
+		captureInput = detectEnter.value;
         Chatty.addUserInput(captureInput); //writeToDOM is just a placeholder
     }
 });
 
 
+
 //****************************************************
 // Event handler for <Clear Message Board> key
+// When user clicks <Clear Message Board>
+// calls <clearAllMsgs> to clear all messages from the screen
 //****************************************************
 var clearAllMsgs = document.getElementById("clearBtn");
 
 clearAllMsgs.addEventListener("click", function(){
-	Chatty.clearAllMsgs();
+    Chatty.clearAllMsgs();
 });
+
 
 
 //****************************************************
@@ -53,7 +56,6 @@ function toggleTheme(){
         themeFlag = "darkTheme";
         screenBackground.style.backgroundColor = "darkgrey";
         for (var i=0; i<messageHolders.length; i++) {
-// console.log("messageHolders[i].innerHTML :: i,", i, messageHolders[i].innerHTML);
 
             messageHolders[i].style.color = "white";
         } // forloop
@@ -86,7 +88,6 @@ function toggleFont(){
     if (fontFlag === "initState") {
         fontFlag = "largeFont";
         for (var i=0; i<messageHolders.length; i++) {
-// console.log("messageHolders[i].innerHTML :: i,", i, messageHolders[i].innerHTML);
             messageHolders[i].style.fontSize = "2.0em";
         } // forloop
         
@@ -98,4 +99,5 @@ function toggleFont(){
         } // for loop
     } // else
 } // function toggleFont
+
 
