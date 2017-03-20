@@ -9,11 +9,11 @@ var Chatty = (function (oldChatty) {
 			var messageElement = "";
 				for (var i = 0; i < messageArray.length; i++) {
 					var captureMessage = messageArray[i];
-					messageElement += `<div class="mssgText">${captureMessage}<button class="delMsg btn" id = "${i}">Delete</button><input class='play btn' type='button' value='🔊 Play' /></div>`;
+					messageElement += `<div class="mssgText">${captureMessage}<button class="delMsg btn btn-danger" id = "${i}">Delete</button><input class='play btn btn-warning' type='button' value='🔊 Play' /></div>`;
 				}
 				output.innerHTML = messageElement;
 		};
-		
+
 	return oldChatty;
 
 })(Chatty || {});
