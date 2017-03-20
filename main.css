@@ -25,6 +25,7 @@ container elements
 
 h3 {
 	margin-left: 20px;
+	padding-top: 80px;
 }
 
 input[type=checkbox] {
@@ -50,5 +51,25 @@ input[type=checkbox] {
 .delMsg, .play {
 	margin-left: 20px;
 }
+
+div.navbar-form{
+	margin-top: 0;
+}
+
+div.bg-warning:hover {
+	opacity: .9;
+	filter:alpha (opacity = 90);
+}
+
+#logo {
+	height: 100px;
+	width: 100px;
+}
+
+
+
+
+
+
 
 
