@@ -27,3 +27,10 @@
 - cd projects-chatty-scorpion-ducks
 - npm install http-server -g
 - http-server -p 8080
+
+## Contributors
+- Marcus Gill
+- Sany Yousif
+- Andrea Finch
+- Latasha Simmons
+- Sharon Smith
