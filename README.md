@@ -11,6 +11,7 @@
 5. The application should also contain a speech feature to accomadate the visually impared.
 6. The application should also contain multiple themes.  Such as a light theme and a dark theme.
 7. The application should also contain an option to make the font larger.
+8. Disable the clear all button if there aren't any messages in the DOM.
 
 ![Blog Screengrab](https://raw.githubusercontent.com/nss-evening-cohort-05/chatty-scorpion-ducks/master/ScreenGrab.PNG)
 
